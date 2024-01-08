@@ -1,5 +1,5 @@
 
-SRC = main.c Turbo-Base64/turbob64d.c
+SRC = gcode-preview.c Turbo-Base64/turbob64d.c
 OBJ = ${SRC:.c=.o}
 
 all: options gcode-preview
@@ -14,10 +14,10 @@ options:
 	${CC} -c ${CFLAGS} $<
 
 gcode-preview: ${OBJ}
-	${CC} -o $@ main.o turbob64d.o ${LDFLAGS}
+	${CC} -o $@ gcode-preview.o turbob64d.o ${LDFLAGS}
 
 clean:
-	rm -f gcode-preview main.o turbob64d.o
+	rm -f gcode-preview gcode-preview.o turbob64d.o
 
 install: all
 	mkdir -p ${DESTDIR}${PREFIX}/bin
