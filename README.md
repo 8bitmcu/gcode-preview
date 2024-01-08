@@ -11,8 +11,3 @@ Building and installing the C version
 2. run `make clean && sudo make install` from within the repository folder
 
 
-Which is faster?
-----------------
-
-
-
