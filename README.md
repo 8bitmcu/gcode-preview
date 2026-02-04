@@ -5,9 +5,9 @@ A minimalist, high-performance C utility to extract embedded base64 thumbnails f
 
 ## Features
 
-**Zero Bloat**: Focused solely on extracting and decoding embedded preview data.
-**Performance**: Uses Turbo-Base64 for accelerated decoding.
-**Unix-Philosphy**: Simple CLI flags, easy to integrate into shell scripts or file manager (Ranger/LF) previews.
+- **Zero Bloat**: Focused solely on extracting and decoding embedded preview data.
+- **Performance**: Uses Turbo-Base64 for accelerated decoding.
+- **Unix-Philosphy**: Simple CLI flags, easy to integrate into shell scripts or file manager (Ranger/LF) previews.
 
 
 Building and installing the C version
@@ -23,11 +23,13 @@ Example usage
 -------------
 
 Basic extraction
+
 `gcode-preview -i benchy.gcode -o thumb.png`
 
 `gcode-preview-bash benchy.gcode thumb.png`
 
 Generate thumbnails for an entire directory of G-code:
+
 `for f in *.gcode; do gcode-preview -i "$f" -o "${f%.gcode}.png"; done`
 
 Performance
